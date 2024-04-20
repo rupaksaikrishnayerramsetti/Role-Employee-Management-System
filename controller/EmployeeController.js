@@ -1,6 +1,11 @@
 const { employeeSchemaCheck } = require('../helper/InputDataValidation');
 const Employee = require('../models/EmployeeModel')
 
+/**
+ * Handles retrieving a list of employees with pagination.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handleGetEmployee(req, res) {
     try {
         let { page, limit } = req.query;
@@ -24,6 +29,11 @@ async function handleGetEmployee(req, res) {
     }
 }
 
+/**
+ * Handles retrieving an employee by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handleGetEmployeeById(req, res) {
     try{
         const { id } = req.params;
@@ -37,6 +47,11 @@ async function handleGetEmployeeById(req, res) {
     }
 }
 
+/**
+ * Handles creating a new employee.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handlePostEmployee(req, res) {
     try{
         const body = req.body
@@ -54,6 +69,11 @@ async function handlePostEmployee(req, res) {
     }
 }
 
+/**
+ * Handles updating an employee by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handlePutEmployeeById(req, res) {
     try{
         const { id } = req.params
@@ -72,6 +92,11 @@ async function handlePutEmployeeById(req, res) {
     }
 }
 
+/**
+ * Handles deleting an employee by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handleDeleteEmployeeById(req, res) {
     try{
         const { id } = req.params

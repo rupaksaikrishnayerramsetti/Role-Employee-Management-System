@@ -1,6 +1,11 @@
 const Role = require('../models/RoleModel')
 const {roleSchemaCheck} = require('../helper/InputDataValidation')
 
+/**
+ * Handles retrieving a list of roles with pagination.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handleGetRole(req, res) {
     try {
         let { page, limit } = req.query;
@@ -24,7 +29,11 @@ async function handleGetRole(req, res) {
     }
 }
 
-
+/**
+ * Handles retrieving a role by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handleGetRoleById(req, res) {
     try{
         const { id } = req.params;
@@ -38,6 +47,11 @@ async function handleGetRoleById(req, res) {
     }
 }
 
+/**
+ * Handles creating a new role.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handlePostRole(req, res) {
     try {
         const body = req.body;
@@ -55,6 +69,11 @@ async function handlePostRole(req, res) {
     }
 }
 
+/**
+ * Handles updating a role by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handlePutRoleById(req, res) {
     try{
         const { id } = req.params
@@ -73,6 +92,11 @@ async function handlePutRoleById(req, res) {
     }
 }
 
+/**
+ * Handles deleting a role by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 async function handleDeleteRoleById(req, res) {
     try{
         const { id } = req.params
