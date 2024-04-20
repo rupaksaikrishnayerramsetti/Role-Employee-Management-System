@@ -20,19 +20,7 @@ const {
     handleLoginCheck
 } = require('../controller/AdminController')
 
-/**
- * @swagger
- * tags:
- *   - name: Admin
- *     description: Admin operations
- *   - name: Roles
- *     description: Role operations
- *   - name: Employees
- *     description: Employee operations
- *   - name: Employee Roles
- *     description: Employee role operations
- */
-// Routes for Admin
+//  Routes for Admin
 router.post("/create-admin", handleAdminCreate)
 router.post("/login", handleLoginCheck)
 
