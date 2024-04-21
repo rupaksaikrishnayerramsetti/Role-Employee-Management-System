@@ -22,3 +22,13 @@ To start the application
  The postman folder contains the json file to have documentation of all the API's
  
  PostmanJsonFile/Role-Employee-Management-System-API.postman_collection.json
+
+Instructions
+
+1. If a repository is cloned for the first time then the Admin API like /api/create-admin should be called to insert data into Admin table
+
+2. Then login with the credentials so that a JWT token will be generated this step is done to implement the Authentication and Authorization as specified
+
+3. Then for each and every other API's for Roles, Employees and Employee Role. The JWT token should be included into the header with the key value pair as like the below example.
+
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6IjY2MjM4Nzk5OTlmNjcyNjdmOWMxMGMwNiIsImlhdCI6MTcxMzYwNDUxN30.UuT7V3gDrzSOj--fTWEjhDIHZSI7jL5ecgTnfLYTrLk 
